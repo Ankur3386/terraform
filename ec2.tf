@@ -1,4 +1,4 @@
-resource "aws_key_pair" "ank_key"{
+resource "aws_key_pair" "ank_key2"{
 key_name= "ankur_key"
 public_key= file("terra.pub")
 }
@@ -56,7 +56,7 @@ resource "aws_instance" "ec2"{
 key_name= aws_key_pair.ank_key.key_name
 ami= "ami-0b6d9d3d33ba97d99"
 security_groups= [aws_security_group.sub.name]
-instance_type= var.enc2_instance
+instance_type= var.ec2_instance
 root_block_device{
  volume_size =15
  volume_type = "gp3"
