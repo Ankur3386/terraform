@@ -1,5 +1,5 @@
-resource "aws_key_pair" "ank_key2"{
-key_name= "ankur_key"
+resource "aws_key_pair" "ank_key"{
+key_name= "ankur_key3"
 public_key= file("terra.pub")
 }
 
@@ -12,7 +12,7 @@ resource "aws_default_vpc" "default"{
 
 resource "aws_security_group" "sub"{
 vpc_id = aws_default_vpc.default.id
-name= "ank"
+name= "ank2"
 description=" this is a security group with default vpc"
 ingress{
   description="allow http"
