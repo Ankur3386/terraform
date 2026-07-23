@@ -1,5 +1,5 @@
 resource "aws_key_pair" "ank_key"{
-key_name= "ankur_key"
+key_name= "ankur_key2"
 public_key= file("terra.pub")
 }
 
